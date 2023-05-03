@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../stile.css" />
+
+    <title>Document</title>
+</head>
+<body >
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <a class="navbar-brand mb-0 h1">
+            <img class= "d-inline-block align-top" src="../bootstrap/assets/img/bootstrap-icons.png" width="50" height="30">
+            JunkJedis
+        </a>
+
+        <div
+            class="collapse navbar-collapse" id=" navbar-Nav">
+            <ul class="navbar-nav light mx-auto w-100" style="background-color: #e3f2fd;">
+                <li class="nav-item active mx-auto">
+                    <a href="../index.html" class="nav-link">
+                        Come funziona
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../dove_lo_butto/ricerca.html" class="nav-link">
+                        Dove lo butto
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="#" class="nav-link disabled">
+                        Raccolta rifiuti ingombranti
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../calendari/scelta.html" class="nav-link">
+                        Calendari raccolta rifiuti
+                    </a>
+                </li>
+            </ul>    
+        </div>        
+    </nav>
+    <div class="titoli_centrali"><b><u>Raccolta rifiuti ingombranti</u></b></div>
+    <form  class="registrazione" action="./registrazione.php" method="POST">
+        <div class="form-group">
+            <h1 class="text-lg-center"><b>Registrazione</b></h1>
+            <br>
+            <div class="text-center"><b>Inserisci i tuoi dati:</b></div>
+            <br>
+            <input type="text" placeholder="Nome" name="inputNome"
+            class="form-control" required autofocus>
+            <input type="text" placeholder="Cognome" name="inputCognome"
+            class="form-control" required>
+            <input type="text" placeholder="Comune di residenza" name="inputComune"
+            class="form-control" required>
+            <input type="text" placeholder="Indirizzo di residenza" name="inputVia"
+            class="form-control" required>
+            <input type="email" placeholder="Indirizzo e-mail" name="inputEmail"
+            class="form-control" required>
+            <input type="password" placeholder="Password" name="inputPassword"
+            class="form-control" required>
+            <br>
+            <button type="submit" class="btn btn-primary">Registrati</button>
+        </div>
+    </form>
+
+   
+</body>
+</html>
