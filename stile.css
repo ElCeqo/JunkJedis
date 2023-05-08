@@ -1,0 +1,156 @@
+div.titoli {
+    padding-left: 50px;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div.c1 {
+    padding-left: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div.c2 {
+    padding-left: 65px;
+}
+div.box1 {
+    width: 100%;
+    margin-bottom: 5px;
+    background: #009FDA;
+    
+}
+img.img_home {
+    max-width: 150px;
+    padding-top: 100px;
+    padding-left:100px;
+    
+}
+div.logo_home{
+    font-size: xxx-large;
+    padding-left:700px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+div.titoli_centrali {
+    padding-left:37%;
+    padding-top:5%;
+    padding-bottom: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:xx-large;
+    
+}
+form {
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    margin-top:100px;
+    padding:30px;
+}
+form.registrazione {
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    margin-top:40px;
+    padding:30px;
+
+}
+
+body {
+    background-color: #7dd4f4;
+}
+
+select.defaultselect{
+    width:90%;
+    margin-top:50px;
+
+}
+
+input.lista_rifiuti {
+    width:90%;
+    margin-top:70px;
+}
+
+div.bottone {
+    padding-left: 350px;;
+}
+
+img.img_cal {
+    padding-left: 150px;
+    padding-top:90px;
+    width: auto;
+}
+
+img.legenda {
+    padding-left:40%;
+}
+
+div.titoli_centrali_calendari {
+    padding-left:32%;
+    padding-top:5%;
+    padding-bottom: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:xx-large;
+
+}
+
+div.titoli_centrali_dlb {
+    padding-left:43%;
+    padding-top:5%;
+    padding-bottom: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:xx-large;
+
+}
+
+div.box_m1 {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1)
+}
+div.box_m2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1)
+
+}
+div.box_m3 {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1)
+
+}
+div.box_m4 {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1)
+
+}
+div.box_m5 {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1)
+
+}
+
+div.box_open {
+    max-height: 300px;;
+}
+
+div.box_ritiro {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s cubic-bezier(1, 0, 0, 1)
+}
+
+div.box_open_r {
+    max-height: 200px;
+}
+
+div.box_info {
+    border: 3px solid black;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 3px;
+}
+
+img.img_dlb {
+    padding-left:80%;
+    width: auto
+}
