@@ -20,7 +20,7 @@
                     $result = pg_query_params($dbconn, $q2, array($email,$password));
                     if (!($tuple=pg_fetch_array($result, null, PGSQL_ASSOC))) {
                         echo "<h1> La password e' errata! </h1>
-                            Clicca <a href=login.html> qui </a> per provare ad accedere di nuovo";
+                            Clicca <a href=.login_index.html> qui </a> per provare ad accedere di nuovo";
                     }
                     else {
                         $nome = $tuple['nome']; //Prende il nome dall'array associativo ricavato dal db
