@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../stile.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<script type="text/javascript">
+
+    function Mostra() {
+        if (document.getElementById("muni").value=="Municipio I" || document.getElementById("muni").value=="Municipio XI" || document.getElementById("muni").value=="Municipio XV" ) {
+        $(document).ready(function() {
+                $("div.box_m1").addClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio II" || document.getElementById("muni").value=="Municipio XII" || document.getElementById("muni").value=="Municipio XIV") {
+        $(document).ready(function() {
+                $("div.box_m2").addClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio III" || document.getElementById("muni").value=="Municipio VI" || document.getElementById("muni").value=="Municipio XIII") {
+        $(document).ready(function() {
+                $("div.box_m3").addClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio IV" || document.getElementById("muni").value=="Municipio VII" || document.getElementById("muni").value=="Municipio IX") {
+        $(document).ready(function() {
+                $("div.box_m4").addClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio V" || document.getElementById("muni").value=="Municipio X" || document.getElementById("muni").value=="Municipio VIII") {
+        $(document).ready(function() {
+                $("div.box_m5").addClass("box_open");  
+        });
+        }
+    }
+
+    function Chiudi() {
+        if (document.getElementById("muni").value=="Municipio I" || document.getElementById("muni").value=="Municipio XI" || document.getElementById("muni").value=="Municipio XV" ) {
+        $(document).ready(function() {
+                $("div.box_m1").removeClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio II" || document.getElementById("muni").value=="Municipio XII" || document.getElementById("muni").value=="Municipio XIV") {
+        $(document).ready(function() {
+                $("div.box_m2").removeClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio III" || document.getElementById("muni").value=="Municipio VI" || document.getElementById("muni").value=="Municipio XIII") {
+        $(document).ready(function() {
+                $("div.box_m3").removeClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio IV" || document.getElementById("muni").value=="Municipio VII" || document.getElementById("muni").value=="Municipio IX") {
+        $(document).ready(function() {
+                $("div.box_m4").removeClass("box_open");  
+        });
+        }
+        if (document.getElementById("muni").value=="Municipio V" || document.getElementById("muni").value=="Municipio X" || document.getElementById("muni").value=="Municipio VIII") {
+        $(document).ready(function() {
+                $("div.box_m5").removeClass("box_open");  
+        });
+        }
+        
+
+    }
+</script>
+<body >
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <a class="navbar-brand mb-0 h1">
+            <img class= "d-inline-block align-top" src="../images/logo_ok.webp" width="50" height="30">
+            JunkJedis
+        </a>
+
+        <div
+            class="collapse navbar-collapse" id=" navbar-Nav">
+            <ul class="navbar-nav light mx-auto w-100" style="background-color: #e3f2fd;">
+                <li class="nav-item active mx-auto">
+                    <a href="../index.html" class="nav-link">
+                        Come funziona
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../dove_lo_butto/ricerca.html" class="nav-link">
+                        Dove lo butto
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../rifiuti_ingombranti/login_index.html" class="nav-link">
+                        Raccolta rifiuti ingombranti
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="#" class="nav-link disabled">
+                        Calendari raccolta rifiuti
+                    </a>
+                </li>
+            </ul>    
+        </div>        
+    </nav>
+    <div class="titoli_centrali_calendari"><b><u>Calendari raccolta rifiuti porta a porta</u></b></div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-sm-4">
+                <br>
+                <br>
+                <br>
+            <div class="text-center"><b> Seleziona il Municipio di appartenenza per visualizzare il relativo calendario settimanale della raccolta porta a porta</b></div>
+            </div>
+            <div class="col-sm-4" >
+                <div class="text-center">
+                     <h1 class="text-center"><b>Il tuo Municipio</b></h1>
+                    <br>
+                    <select id="muni" class="defaultselect" size="1" cols="20">
+                    <option selected="" value="">Seleziona un Municipio</option>
+                    <option value="Municipio I"> Municipio I</option>
+                    <option value="Municipio II"> Municipio II</option>
+                    <option value="Municipio II"> Municipio III</option>
+                    <option value="Municipio IV"> Municipio IV</option>
+                    <option value="Municipio V"> Municipio V</option>
+                    <option value="Municipio VI"> Municipio VI</option>
+                    <option value="Municipio VII"> Municipio VII</option>
+                    <option value="Municipio VIII"> Municipio VIII</option>
+                    <option value="Municipio IX"> Municipio IX</option>
+                    <option value="Municipio X"> Municipio X</option>
+                    <option value="Municipio XI"> Municipio XI</option>
+                    <option value="Municipio XII"> Municipio XII</option>
+                    <option value="Municipio XIII"> Municipio XIII</option>
+                    <option value="Municipio XIV"> Municipio XIV</option>
+                    <option value="Municipio XV"> Municipio XV</option>
+                    </select>
+                </div>
+                <br>
+                <div class="bottone" name="conferma"> <button type="button" class="btn btn-primary" onclick="return Mostra()">Conferma</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <img class="img_cal" src="../images/building-recycle-alt.png">
+            </div>
+    </div>
+</div>
+<br>
+
+<div class="box_m1">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Martedì, giovedì e sabato (esposizione entro le ore 20)</td>
+                    <td>Mercoledì (esposizione entro le ore 7)</td>
+                    <td>Venerdì (esposizione entro le ore 7)</td>
+                    <td>Sabato (esposizione entro le ore 7)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi()">Chiudi</button></div>
+</div>
+
+<div class="box_m2">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Martedì, giovedì e sabato (esposizione entro le ore 20)</td>
+                    <td>Martedì (esposizione entro le ore 7)</td>
+                    <td>Sabato (esposizione entro le ore 7)</td>
+                    <td>giovedì (esposizione entro le ore 7)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi()">Chiudi</button></div>
+</div>
+
+<div class="box_m3">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Lunedì, mercoledì e venerdì (esposizione entro le ore 7)</td>
+                    <td>Mercoledì (esposizione entro le ore 21)</td>
+                    <td>Venerdì (esposizione ento le ore 21)</td>
+                    <td>Lunedì (esposizione entro le ore 21)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi()">Chiudi</button></div>
+</div>
+
+<div class="box_m4">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Martedì, giovedì e sabato (esposizione entro le ore 20)</td>
+                    <td>Sabato (esposizione entro le ore 7)</td>
+                    <td>Martedì (esposizione entro le ore 7)</td>
+                    <td>Giovedì (esposizione entro le ore 7)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi()">Chiudi</button></div>
+</div>
+
+<div class="box_m5">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Lunedì, mercoledì e venerdì (esposizione entro le ore 21)</td>
+                    <td>Mercoledì (esposizione entro le ore 21)</td>
+                    <td>Venerdì (esposizione entro le ore 21)</td>
+                    <td>Lunedì (esposizione entro le ore 21)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi()">Chiudi</button></div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/carta.png">
+            <div class="text-center"> <b><u>Carta e cartone</u></b></div>
+            <br>
+            <div class="text-center">Giornali, quaderni, sacchetti e confezioni di carta, cartoni della pizza senza residui di cibo, riviste e tetrapak </div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/indiff.png">
+        <div class="text-center"> <b><u>Indifferenziato</u></b></div>
+        <br>
+        <div class="text-center">Tutto quello che non può essere differenziato come, ad esempio, pannolini e assorbenti, scontrini, CD, fotografie, mascherine e guanti usa e getta</div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/plastica.png">
+        <div class="text-center"> <b><u>Plastica e metalli</u></b></div>
+        <br>
+        <div class="text-center">Bottiglie di plastica, flaconi e sacchetti, bicchieri e piatti, vaschette per alimenti, polistirolo, barattoli e scatolette di metallo, lattine, fogli di alluminio e bombolette spray</div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/umido.png">
+        <div class="text-center"> <b><u>Organico</u></b></div>
+        <br>
+        <div class="text-center">Scarti di frutta e verdura, scarti domestici di carne e pesce, gusci d'uovo, riso, pasta, pane, biscotti e farinacei. Fondi di caffè, filtri di tè e altre bevande di infusione. Tovaglioli di carta sporchi o avanzi di cibo </div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/vetro.png">
+        <div class="text-center"> <b><u>Vetro</u></b></div>
+        <br>
+        <div class="text-center">Bottiglie e vasetti in vetro senza tappo</div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/cam.png">
+        <div class="text-center"> <b><u>CAM</u></b></div>
+        <br>
+        <div class="text-center">Il Centro Ambientale Mobile è una ricicleria mobile dove puoi portare piccoli elettrodomestici ed altre tipologie di rifiuti come, ad esempio, TV a schermo piatto fino a 21'', lampadine, bombolette, toner e pile</div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

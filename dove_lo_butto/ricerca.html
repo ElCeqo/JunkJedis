@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../stile.css" />
+
+    <title>Document</title>
+</head>
+<body >
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <a class="navbar-brand mb-0 h1">
+            <img class= "d-inline-block align-top" src="../images/logo_ok.webp" width="50" height="30">
+            JunkJedis
+        </a>
+
+        <div
+            class="collapse navbar-collapse" id=" navbar-Nav">
+            <ul class="navbar-nav light mx-auto w-100" style="background-color: #e3f2fd;">
+                <li class="nav-item active mx-auto">
+                    <a href="../index.html" class="nav-link">
+                        Come funziona
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="#" class="nav-link disabled">
+                        Dove lo butto
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../rifiuti_ingombranti/login_index.html" class="nav-link">
+                        Raccolta rifiuti ingombranti
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../calendari/scelta.html" class="nav-link">
+                        Calendari raccolta rifiuti
+                    </a>
+                </li>
+            </ul>    
+        </div>        
+    </nav>
+    <div class="titoli_centrali_dlb"><b><u>Dove lo butto?</u></b></div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-sm-4">
+                <br>
+                <br>
+                <br>
+            <div class="text-center"><b>Inserisci il codice a barre del prodotto per ottenere le informazioni corrette su come differenziarlo</b></div>
+            </div>
+            <div class="col-sm-4" >
+                <div class="text-center">
+                    <br>
+                    <br>
+                    <br>
+                    <form action="./ricerca_codici.php" method="post">
+                    <input type="text" placeholder="Inserisci il codice ISBN" name="inputCodice"> </div>
+                    <br>
+                    <div class="bottone" > <button type="submit" class="btn btn-primary">Conferma</button>
+                    </div>
+                    </form>
+            </div>
+            <div class="col-sm-4">
+                <img class="img_cal" src="../images/trash-charge.png">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
