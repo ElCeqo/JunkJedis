@@ -306,31 +306,70 @@
                         center: latAndLong,
                         zoom: zoomLevel
                     });
+
+                    var popupOffsets = {
+                        top: [0, 0],
+		                bottom: [0, -40],
+                        'bottom-right': [0, -40],
+                        'bottom-left': [0, -40],
+                        left: [25, -35],
+                        right: [-25, -35]
+                    }
+
                     var latAndLong1 = {lat: 41.940470090517884, lng: 12.491351841624638}
+                    var popup1 = new tt.Popup({offset: popupOffsets}).setHTML('Via Campi Sportivi 100');
+                    
                     var latAndLong2 = {lat: 41.962825748632355, lng: 12.548191383953341}
+                    var popup2 = new tt.Popup({offset: popupOffsets}).setHTML('Via della Bufalotta 592');
+                    
                     var latAndLong3 = {lat: 41.95878094065406, lng: 12.528816197445094}
+                    var popup3 = new tt.Popup({offset: popupOffsets}).setHTML('Via Ateneo Salesiano');
+                    
                     var latAndLong4 = {lat: 41.92119853256342, lng: 12.563183499295999}
+                    var popup4 = new tt.Popup({offset: popupOffsets}).setHTML('Via Cassino 7 - 9 ');
+                    
                     var latAndLong5 = {lat: 41.889689117518195, lng: 12.547923624425941}
+                    var popup5 = new tt.Popup({offset: popupOffsets}).setHTML('Via Teano 38');
+                    
                     var latAndLong6 = {lat: 41.85590580172166, lng: 12.570821938496664}
+                    var popup6 = new tt.Popup({offset: popupOffsets}).setHTML('Viale P. Togliatti 69');
+                    
                     var latAndLong7 = {lat: 41.80039983806994, lng: 12.443359741619014}
+                    var popup7 = new tt.Popup({offset: popupOffsets}).setHTML('Via Riccardo Boschiero');
+                    
                     var latAndLong8 = {lat: 41.80174743521044, lng: 12.481835010930592}
+                    var popup8 = new tt.Popup({offset: popupOffsets}).setHTML('Via Laurentina 881');
+                    
                     var latAndLong9 = {lat: 41.77944888050819, lng: 12.35183272627395}
+                    var popup9 = new tt.Popup({offset: popupOffsets}).setHTML('Via di Macchia Saponara 7 - 9');
+                    
                     var latAndLong10 = {lat: 41.92485745287173, lng: 12.419927013453343}
+                    var popup10 = new tt.Popup({offset: popupOffsets}).setHTML('Via Mattia Battistini 545');
                 
-                    var marker = new tt.Marker().setLngLat(latAndLong1).addTo(map);
+                    var marker1 = new tt.Marker().setLngLat(latAndLong1).addTo(map);
+                    marker1.setPopup(popup1).togglePopup();
                     var marker2 = new tt.Marker().setLngLat(latAndLong2).addTo(map);
+                    marker2.setPopup(popup2).togglePopup();
                     var marker3 = new tt.Marker().setLngLat(latAndLong3).addTo(map);
+                    marker3.setPopup(popup3).togglePopup();
                     var marker4 = new tt.Marker().setLngLat(latAndLong4).addTo(map);
+                    marker4.setPopup(popup4).togglePopup();
                     var marker5 = new tt.Marker().setLngLat(latAndLong5).addTo(map);
+                    marker5.setPopup(popup5).togglePopup();
                     var marker6 = new tt.Marker().setLngLat(latAndLong6).addTo(map);
+                    marker6.setPopup(popup6).togglePopup();
                     var marker7 = new tt.Marker().setLngLat(latAndLong7).addTo(map);
+                    marker7.setPopup(popup7).togglePopup();
                     var marker8 = new tt.Marker().setLngLat(latAndLong8).addTo(map);
+                    marker8.setPopup(popup8).togglePopup();
                     var marker9 = new tt.Marker().setLngLat(latAndLong9).addTo(map);
+                    marker9.setPopup(popup9).togglePopup();
                     var marker10 = new tt.Marker().setLngLat(latAndLong10).addTo(map);
+                    marker10.setPopup(popup10).togglePopup();
                 }
             
             </script>
-</div>
+        </div>
         </div>
 
 
