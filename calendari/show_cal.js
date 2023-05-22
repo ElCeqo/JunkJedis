@@ -57,5 +57,7 @@ function Chiudi(box) {
                 case "box_m5":
                         $("div.box_m5").removeClass("box_open");
                         break;
+                default:
+                        return;
         } 
 }
