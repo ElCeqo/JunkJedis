@@ -24,7 +24,7 @@ if (!isset($_SESSION['loggato'])||$_SESSION['loggato']!==true) {
         <h1>JunkJedis</h1>
         <br>
         <h2>La tua richiesta è stata presa in carico. <br> Clicca
-            <a href=./logout.php> qui </a> per effettuare il logout.</h2>
+            <a href=./richiesta.php> qui </a> per tornare alla pagina di gestione account.</h2>
     </div>
 
     
