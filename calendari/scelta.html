@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0",shrink-to-fit=no>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stile.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./show_cal.js" type="application/javascript"></script>
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps.css'>
+    <script onload="mapContent();" src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.5.0/maps/maps-web.min.js" defer></script>
+
+
+    <title>JunkJedis</title>
+</head>
+
+<body >
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <a class="navbar-brand mb-0 h1">
+            <img class= "d-inline-block align-top" src="../images/logo_ok.webp" width="50" height="30">
+            JunkJedis
+        </a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div
+            class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav light mx-auto w-100" style="background-color: #e3f2fd;">
+                <li class="nav-item active mx-auto">
+                    <a href="../index.html" class="nav-link">
+                        Come funziona
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../dove_lo_butto/ricerca.html" class="nav-link">
+                        Dove lo butto
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="../rifiuti_ingombranti/login_index.html" class="nav-link">
+                        Raccolta rifiuti ingombranti
+                    </a>
+                </li>
+                <li class="nav-item active mx-auto">
+                    <a href="#" class="nav-link disabled">
+                        Calendari raccolta rifiuti
+                    </a>
+                </li>
+            </ul>    
+        </div>        
+    </nav>
+    <div class="titoli_centrali_calendari"><b><u>Calendari raccolta rifiuti porta a porta</u></b></div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-sm-4">
+                <br>
+                <br>
+                <br>
+            <div class="text-center"><b> Seleziona il Municipio di appartenenza per visualizzare il relativo calendario settimanale della raccolta porta a porta</b></div>
+            </div>
+            <div class="col-sm-4" >
+                <div class="text-center">
+                     <h1 class="text-center"><b>Il tuo Municipio</b></h1>
+                    <br>
+                    <select id="muni" class="defaultselect" size="1" cols="20">
+                    <option selected="" value="">Seleziona un Municipio</option>
+                    <option value="Municipio I"> Municipio I</option>
+                    <option value="Municipio II"> Municipio II</option>
+                    <option value="Municipio II"> Municipio III</option>
+                    <option value="Municipio IV"> Municipio IV</option>
+                    <option value="Municipio V"> Municipio V</option>
+                    <option value="Municipio VI"> Municipio VI</option>
+                    <option value="Municipio VII"> Municipio VII</option>
+                    <option value="Municipio VIII"> Municipio VIII</option>
+                    <option value="Municipio IX"> Municipio IX</option>
+                    <option value="Municipio X"> Municipio X</option>
+                    <option value="Municipio XI"> Municipio XI</option>
+                    <option value="Municipio XII"> Municipio XII</option>
+                    <option value="Municipio XIII"> Municipio XIII</option>
+                    <option value="Municipio XIV"> Municipio XIV</option>
+                    <option value="Municipio XV"> Municipio XV</option>
+                    </select>
+                </div>
+                <br>
+                <div class="bottone" style="padding-left: 77%;" name="conferma"> <button type="button" class="btn btn-primary" onclick="return Mostra()">Conferma</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+               <div class="text-center"><img src="../images/calendar.png" width="250px"></div> 
+            </div>
+    </div>
+</div>
+<br>
+
+<div class="box_m1">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Martedì, giovedì e sabato (esposizione entro le ore 20)</td>
+                    <td>Mercoledì (esposizione entro le ore 7)</td>
+                    <td>Venerdì (esposizione entro le ore 7)</td>
+                    <td>Sabato (esposizione entro le ore 7)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi('box_m1')">Chiudi</button></div>
+</div>
+
+<div class="box_m2">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Martedì, giovedì e sabato (esposizione entro le ore 20)</td>
+                    <td>Martedì (esposizione entro le ore 7)</td>
+                    <td>Sabato (esposizione entro le ore 7)</td>
+                    <td>giovedì (esposizione entro le ore 7)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi('box_m2')">Chiudi</button></div>
+</div>
+
+<div class="box_m3">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Lunedì, mercoledì e venerdì (esposizione entro le ore 7)</td>
+                    <td>Mercoledì (esposizione entro le ore 21)</td>
+                    <td>Venerdì (esposizione ento le ore 21)</td>
+                    <td>Lunedì (esposizione entro le ore 21)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi('box_m3')">Chiudi</button></div>
+</div>
+
+<div class="box_m4">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Martedì, giovedì e sabato (esposizione entro le ore 20)</td>
+                    <td>Sabato (esposizione entro le ore 7)</td>
+                    <td>Martedì (esposizione entro le ore 7)</td>
+                    <td>Giovedì (esposizione entro le ore 7)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi('box_m4')">Chiudi</button></div>
+</div>
+
+<div class="box_m5">
+    <div class="text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Raccolta organico</th>
+                    <th scope="col">Carta e cartone</th>
+                    <th scope="col">Plastica e metalli</th>
+                    <th scope="col">Raccolta indifferenziato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Lunedì, mercoledì e venerdì (esposizione entro le ore 21)</td>
+                    <td>Mercoledì (esposizione entro le ore 21)</td>
+                    <td>Venerdì (esposizione entro le ore 21)</td>
+                    <td>Lunedì (esposizione entro le ore 21)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div class="text-center"> <button type="button" class="btn btn-primary" onclick="return Chiudi('box_m5')">Chiudi</button></div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/carta.png">
+            <div class="text-center"> <b><u>Carta e cartone</u></b></div>
+            <br>
+            <div class="text-center">Giornali, quaderni, sacchetti e confezioni di carta, cartoni della pizza senza residui di cibo, riviste e tetrapak </div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/indiff.png">
+        <div class="text-center"> <b><u>Indifferenziato</u></b></div>
+        <br>
+        <div class="text-center">Tutto quello che non può essere differenziato come, ad esempio, pannolini e assorbenti, scontrini, CD, fotografie, mascherine e guanti usa e getta</div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/plastica.png">
+        <div class="text-center"> <b><u>Plastica e metalli</u></b></div>
+        <br>
+        <div class="text-center">Bottiglie di plastica, flaconi e sacchetti, bicchieri e piatti, vaschette per alimenti, polistirolo, barattoli e scatolette di metallo, lattine, fogli di alluminio e bombolette spray</div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/umido.png">
+        <div class="text-center"> <b><u>Organico</u></b></div>
+        <br>
+        <div class="text-center">Scarti di frutta e verdura, scarti domestici di carne e pesce, gusci d'uovo, riso, pasta, pane, biscotti e farinacei. Fondi di caffè, filtri di tè e altre bevande di infusione. Tovaglioli di carta sporchi o avanzi di cibo </div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/vetro.png">
+        <div class="text-center"> <b><u>Vetro</u></b></div>
+        <br>
+        <div class="text-center">Bottiglie e vasetti in vetro senza tappo</div>
+        </div>
+        <div class="col-sm-4">
+            <img class="legenda" src="../images/cam.png">
+        <div class="text-center"> <b><u>CAM</u></b></div>
+        <br>
+        <div class="text-center">Il Centro Ambientale Mobile è una ricicleria mobile dove puoi portare piccoli elettrodomestici ed altre tipologie di rifiuti come, ad esempio, TV a schermo piatto fino a 21'', lampadine, bombolette, toner e pile</div>
+        </div>
+
+        <div class="container">
+            <br>
+            <br>
+            <div class="text-center"> Qui di seguito sono indicate le principali <b>Isole ecologiche</b> <br> <br></div>
+           
+
+            <div class="row">
+            <br>
+            <br>    
+        <style>
+            #map {
+                height: 800px;
+                width: 100%;
+                border: 3px solid black;
+            }
+            
+            @media only screen and (max-width: 767px) {
+                #map {
+                    height: 300px;
+                }
+            }
+            
+            #marker {
+              background-image: url('/wp-content/uploads/2021/04/copywriter-logo-dark.svg');
+              background-size: cover;
+              width: 30px;
+              height: 30px;
+            }
+            
+            </style>
+            
+            <div id='map'></div>
+            <script>
+                function mapContent(){
+                    var api_key = 'YDHAncYnyUrCNHbmTDXEmFi1NG5YQiQR';
+                    var latAndLong = {lat: 41.902782, lng: 12.496366}; 
+                    var zoomLevel = 11;
+            
+                    var map = tt.map({
+                        container: 'map',
+                        key: api_key,
+                        center: latAndLong,
+                        zoom: zoomLevel
+                    });
+
+                    var popupOffsets = {
+                        top: [0, 0],
+		                bottom: [0, -40],
+                        'bottom-right': [0, -40],
+                        'bottom-left': [0, -40],
+                        left: [25, -35],
+                        right: [-25, -35]
+                    }
+
+                    var latAndLong1 = {lat: 41.940470090517884, lng: 12.491351841624638}
+                    var popup1 = new tt.Popup({offset: popupOffsets}).setHTML('Via Campi Sportivi 100');
+                    
+                    var latAndLong2 = {lat: 41.962825748632355, lng: 12.548191383953341}
+                    var popup2 = new tt.Popup({offset: popupOffsets}).setHTML('Via della Bufalotta 592');
+                    
+                    var latAndLong3 = {lat: 41.95878094065406, lng: 12.528816197445094}
+                    var popup3 = new tt.Popup({offset: popupOffsets}).setHTML('Via Ateneo Salesiano');
+                    
+                    var latAndLong4 = {lat: 41.92119853256342, lng: 12.563183499295999}
+                    var popup4 = new tt.Popup({offset: popupOffsets}).setHTML('Via Cassino 7 - 9 ');
+                    
+                    var latAndLong5 = {lat: 41.889689117518195, lng: 12.547923624425941}
+                    var popup5 = new tt.Popup({offset: popupOffsets}).setHTML('Via Teano 38');
+                    
+                    var latAndLong6 = {lat: 41.85590580172166, lng: 12.570821938496664}
+                    var popup6 = new tt.Popup({offset: popupOffsets}).setHTML('Viale P. Togliatti 69');
+                    
+                    var latAndLong7 = {lat: 41.80039983806994, lng: 12.443359741619014}
+                    var popup7 = new tt.Popup({offset: popupOffsets}).setHTML('Via Riccardo Boschiero');
+                    
+                    var latAndLong8 = {lat: 41.80174743521044, lng: 12.481835010930592}
+                    var popup8 = new tt.Popup({offset: popupOffsets}).setHTML('Via Laurentina 881');
+                    
+                    var latAndLong9 = {lat: 41.77944888050819, lng: 12.35183272627395}
+                    var popup9 = new tt.Popup({offset: popupOffsets}).setHTML('Via di Macchia Saponara 7 - 9');
+                    
+                    var latAndLong10 = {lat: 41.92485745287173, lng: 12.419927013453343}
+                    var popup10 = new tt.Popup({offset: popupOffsets}).setHTML('Via Mattia Battistini 545');
+                
+                    var marker1 = new tt.Marker().setLngLat(latAndLong1).addTo(map);
+                    marker1.setPopup(popup1).togglePopup();
+                    var marker2 = new tt.Marker().setLngLat(latAndLong2).addTo(map);
+                    marker2.setPopup(popup2).togglePopup();
+                    var marker3 = new tt.Marker().setLngLat(latAndLong3).addTo(map);
+                    marker3.setPopup(popup3).togglePopup();
+                    var marker4 = new tt.Marker().setLngLat(latAndLong4).addTo(map);
+                    marker4.setPopup(popup4).togglePopup();
+                    var marker5 = new tt.Marker().setLngLat(latAndLong5).addTo(map);
+                    marker5.setPopup(popup5).togglePopup();
+                    var marker6 = new tt.Marker().setLngLat(latAndLong6).addTo(map);
+                    marker6.setPopup(popup6).togglePopup();
+                    var marker7 = new tt.Marker().setLngLat(latAndLong7).addTo(map);
+                    marker7.setPopup(popup7).togglePopup();
+                    var marker8 = new tt.Marker().setLngLat(latAndLong8).addTo(map);
+                    marker8.setPopup(popup8).togglePopup();
+                    var marker9 = new tt.Marker().setLngLat(latAndLong9).addTo(map);
+                    marker9.setPopup(popup9).togglePopup();
+                    var marker10 = new tt.Marker().setLngLat(latAndLong10).addTo(map);
+                    marker10.setPopup(popup10).togglePopup();
+                }
+            
+            </script>
+        </div>
+        </div>
+
+    </div>
+</div>
+<br>
+<!-- Script for Navbar Collapse       see Documentation link: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
