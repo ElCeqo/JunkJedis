@@ -160,3 +160,10 @@ div.item {
     padding: 3px;
     margin:10px;
 }
+
+div.box_comune {
+    width:90%;
+    background-color: white;
+    margin:auto;
+    border: 3px solid rgb(0, 176, 252);
+}
