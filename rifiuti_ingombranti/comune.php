@@ -9,12 +9,12 @@ $dbconn = pg_connect("host=localhost port=5432 dbname=Login
 user=postgres password=admin") 
 or die('Could not connect: ' . pg_last_error());
 if ($dbconn) {
-    $q1="select municipio, oggetto, via, stato from prenotazioni";
+    $q1="select nome, cognome, municipio, oggetto, via, stato from prenotazioni";
     $result=pg_query_params($dbconn, $q1, array()); 
     if ($result) {
         $tabella="";
         while($row=pg_fetch_array($result, null, PGSQL_ASSOC)) {
-            $tabella.="<tr><td>".$row["municipio"]."</td><td>".$row["oggetto"]."</td><td>".$row["via"]."</td><td>".$row["stato"]."</td><td><a class='btn btn-primary btn-sm' href='./conferma.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."'>Conferma</a></td><td><a class='btn btn-danger btn-sm' href='./respingi.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."'>Respingi</a></tr>";
+            $tabella.="<tr><td>".$row["nome"]."</td><td>".$row["cognome"]."</td><td>".$row["municipio"]."</td><td>".$row["oggetto"]."</td><td>".$row["via"]."</td><td>".$row["stato"]."</td><td><a class='btn btn-primary btn-sm' href='./conferma.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."'>Conferma</a></td><td><a class='btn btn-danger btn-sm' href='./respingi.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."'>Respingi</a></tr>";
         }
     }
 }
@@ -78,6 +78,8 @@ if ($dbconn) {
     <table class="table table-striped">
   <thead>
     <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
       <th scope="col">Municipio</th>
       <th scope="col">Rifiuto da ritirare</th>
       <th scope="col">Indirizzo selezionato</th>
