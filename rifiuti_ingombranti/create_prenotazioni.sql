@@ -4,5 +4,6 @@ create table prenotazioni (
     municipio varchar(40),
     oggetto varchar(40),
     via varchar(40),
-    stato varchar(40)
+    stato varchar(40),
+    email varchar(40),
 );

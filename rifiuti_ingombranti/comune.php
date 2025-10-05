@@ -5,7 +5,7 @@ if (!isset($_SESSION['loggato'])||$_SESSION['loggato']!==true) {
 }
 $name=$_SESSION['nome'];
 $surname=$_SESSION['cognome'];
-$dbconn = pg_connect("host=localhost port=5432 dbname=Login 
+$dbconn = pg_connect("host=localhost port=5432 dbname=postgres 
 user=postgres password=admin") 
 or die('Could not connect: ' . pg_last_error());
 if ($dbconn) {
@@ -14,7 +14,9 @@ if ($dbconn) {
     if ($result) {
         $tabella="";
         while($row=pg_fetch_array($result, null, PGSQL_ASSOC)) {
-            $tabella.="<tr><td>".$row["nome"]."</td><td>".$row["cognome"]."</td><td>".$row["municipio"]."</td><td>".$row["oggetto"]."</td><td>".$row["via"]."</td><td>".$row["stato"]."</td><td><a class='btn btn-primary btn-sm' href='./conferma.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."'>Conferma</a></td><td><a class='btn btn-danger btn-sm' href='./respingi.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."'>Respingi</a></tr>";
+            $tabella.="<tr><td>".$row["nome"]."</td><td>".$row["cognome"]."</td><td>".$row["municipio"]."</td><td>".$row["oggetto"]."</td><td>".$row["via"]."</td><td>".$row["stato"]."</td>
+            <td><a class='btn btn-success btn-sm'id='bottoneConferma' href='./conferma.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."' onclick='this.classList.add(\"disabled\");' >Conferma</a></td>
+            <td><a class='btn btn-danger btn-sm'id=bottoneRespingi href='./respingi.php?municipio=".$row["municipio"]."&oggetto=".$row["oggetto"]."&via=".$row["via"]."'onclick='this.classList.add(\"disabled\");' >Respingi</a></tr>";
         }
     }
 }
@@ -35,12 +37,11 @@ if ($dbconn) {
     
 </head>
 
-<body >
+<body style= "background-color: #54cc9a">
     
     <nav class="navbar navbar-expand-sm navbar-light">
         <a class="navbar-brand mb-0 h1">
-            <img class= "d-inline-block align-top" src="../images/logo_ok.webp" width="50" height="30">
-            JunkJedis
+            <img class= "d-inline-block align-top" src="../images/logo_verde.png" width="70" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -97,7 +98,7 @@ if ($dbconn) {
 </div>
 <br>
 <br>
-<a href="./logout.php"> <button type="button" class="btn btn-primary">Logout</button></a>
+<a href="./logout.php"> <button type="button" class="btn btn-success">Logout</button></a>
 </div>
 <!-- Script for Navbar Collapse       see Documentation link: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

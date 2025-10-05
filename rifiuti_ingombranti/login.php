@@ -3,7 +3,7 @@
     <head></head>
     <body>
         <?php
-           $dbconn = pg_connect("host=localhost port=5432 dbname=Login 
+           $dbconn = pg_connect("host=localhost port=5432 dbname=postgres 
            user=postgres password=admin") 
            or die('Could not connect: ' . pg_last_error()); 
             if ($dbconn) {
@@ -25,6 +25,7 @@
                         $_SESSION['loggato']=true;
                         $_SESSION['nome']=$tuple['nome'];
                         $_SESSION['cognome']=$tuple['cognome'];
+                        $_SESSION['email']=$tuple['email'];
                         $email_comune=$tuple['email'];
                         if ($email_comune=="admin@roma.it") {
                             header("location: ./comune.php");

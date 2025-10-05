@@ -16,12 +16,11 @@ if (!isset($_SESSION['loggato'])||$_SESSION['loggato']!==true) {
 
     <title>JunkJedis</title>
 </head>
-<body>
+<body style= "background-color: #54cc9a">
     <div class="text-center">
         <br>
-        <img src="../images/logo_ok.webp" width="100px">
+        <img src="../images/logo_verde.png" width="100px">
         <br>
-        <h1>JunkJedis</h1>
         <br>
         <h2>La tua richiesta è stata presa in carico. <br>  Clicca
             <a href=./richiesta.php> qui </a> per tornare alla pagina di gestione account.</h2>

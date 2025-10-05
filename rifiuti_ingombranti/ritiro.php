@@ -15,7 +15,8 @@ if (!isset($_SESSION['loggato'])||$_SESSION['loggato']!==true) {
 }
 $name=$_SESSION['nome'];
 $surname=$_SESSION['cognome'];
-$dbconn = pg_connect("host=localhost port=5432 dbname=Login 
+$email=$_SESSION['email'];
+$dbconn = pg_connect("host=localhost port=5432 dbname=postgres 
 user=postgres password=admin") 
 or die('Could not connect: ' . pg_last_error());
 if ($dbconn) {
@@ -23,9 +24,9 @@ $municipio = $_POST['inputMuni'];
 $rifiuto = $_POST['inputRifiuto'];
 $via = $_POST['inputIndirizzo'];
 $stato="In attesa di conferma";
-$q2 = "insert into prenotazioni values ($1,$2,$3,$4,$5,$6)"; //Inserisco una nuova tupla nel db
+$q2 = "insert into prenotazioni values ($1,$2,$3,$4,$5,$6,$7)"; //Inserisco una nuova tupla nel db
 $data = pg_query_params($dbconn, $q2,
-    array($name,$surname,$municipio,$rifiuto,$via,$stato));
+    array($name,$surname,$municipio,$rifiuto,$via,$stato,$email));
 }
 header("location:./request_ok.php");
 ?>

@@ -5,7 +5,7 @@ if (!isset($_SESSION['loggato'])||$_SESSION['loggato']!==true) {
 }
 $name=$_SESSION['nome'];
 $surname=$_SESSION['cognome'];
-$dbconn = pg_connect("host=localhost port=5432 dbname=Login 
+$dbconn = pg_connect("host=localhost port=5432 dbname=postgres 
 user=postgres password=admin") 
 or die('Could not connect: ' . pg_last_error());
 if ($dbconn) {
@@ -39,12 +39,11 @@ if ($dbconn) {
     
 </head>
 
-<body >
+<body style= "background-color: #54cc9a">
     
     <nav class="navbar navbar-expand-sm navbar-light">
         <a class="navbar-brand mb-0 h1">
-            <img class= "d-inline-block align-top" src="../images/logo_ok.webp" width="50" height="30">
-            JunkJedis
+            <img class= "d-inline-block align-top" src="../images/logo_verde.png" width="70" height="70">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -124,15 +123,15 @@ if ($dbconn) {
                     <input id="via" class="form-control" type="indirizzo" placeholder="Inserisci un indirizzo" name="inputIndirizzo" autocomplete="off" required>
                     <br>
            
-             <button type="submit" class="btn btn-primary" >Invia richiesta</button>
+             <button type="submit" class="btn btn-success" >Invia richiesta</button>
              <br>
              <br>
-             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
   Riepilogo prenotazioni
 </button>
 <br>
 <br>
-<a href="./logout.php"> <button type="button" class="btn btn-primary">Logout</button></a>
+<a href="./logout.php"> <button type="button" class="btn btn-success">Logout</button></a>
 </form>
 
 
