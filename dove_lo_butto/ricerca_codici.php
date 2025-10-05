@@ -3,26 +3,26 @@
     <head></head>
     <body>
         <?php
-            $dbconn = pg_connect("host=localhost port=5432 dbname=Login 
+            $dbconn = pg_connect("host=localhost port=5432 dbname=postgres 
             user=postgres password=admin") 
             or die('Could not connect: ' . pg_last_error());
             if ($dbconn) {
-                $codice = $_POST['inputCodice']; 
-                $q1="select * from prodotto where codice= $1";
-                $result=pg_query_params($dbconn, $q1, array($codice)); 
+                $nome = $_POST['inputNome']; 
+                $q1="select * from prodotto where nome= $1";
+                $result=pg_query_params($dbconn, $q1, array($nome)); 
                 $tuple=pg_fetch_array($result, null, PGSQL_ASSOC);
                 if ($tuple!=NULL) {
                     $tipo=$tuple['materiale'];
-                    if ($tipo=="carta") {
+                    if ($tipo=="Carta") {
                         header("location: ./carta.html");
                     }
-                    else if ($tipo=="plastica") {
+                    else if ($tipo=="Plastica") {
                         header("location: ./plastica.html");
                     }
-                    else if ($tipo=="organico") {
+                    else if ($tipo=="Organico") {
                         header("location: ./organico.html");
                     }
-                    else if ($tipo=="indifferenziato") {
+                    else if ($tipo=="Indifferenziato") {
                         header("location: ./indifferenziato.html");
                     }
                 }

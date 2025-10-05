@@ -1,5 +1,5 @@
 create table prodotto (
-    codice integer,
+    nome varchar(40),
     materiale varchar(40),
-    primary key (codice)
+    primary key (nome)
 );
